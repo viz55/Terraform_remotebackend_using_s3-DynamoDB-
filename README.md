@@ -39,6 +39,8 @@ This avoids state corruption in teams or CI/CD.
 git clone <your-repo-url>
 cd <your-repo>
 ```
+Open remote_state file using `cd` command.
+
 #### Note:- Move the `backend.tf` file to some other directory or copy the format in a notepad to use it later. The `backend.tf` file should not be in the same folder as `boot.tf` before initialising terraform.
 
 ### 2. Initialise Terraform
@@ -95,4 +97,8 @@ You should see a lock entry.
 
 When Terraform finishes, the lock is released (table looks empty again).
 
+We can also see that there is a Terraform file with `.tfstate` extension formed inside the s3 bucket.
 
+---
+#### Note:-The `local_state` file can be used as a simple separate project to check the functtionality of terraform.
+---
